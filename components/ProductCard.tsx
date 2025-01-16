@@ -32,7 +32,7 @@ export default function ProductCard() {
             <p className='text-green-600'>In stock</p>
             <p className='font-bold text-lg'>$500</p>
         </div>
-        <AddToCartButton/>
+        <AddToCartButton title='Add Cart'/>
     </div>
 
   )
