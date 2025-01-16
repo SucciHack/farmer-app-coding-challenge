@@ -55,7 +55,7 @@ export default function Carousel() {
 	};
 
 	return (
-		<div className="relative h-[500px]">
+		<div className="relative">
 			{/* Image Section */}
 			<div className="relative h-[150px] w-[150px] mx-auto mt-[20%] object-contain overflow-hidden rounded-lg md:h-48">
 				{slides.map((slide, index) => (
@@ -89,7 +89,7 @@ export default function Carousel() {
 			</div>
 
 			{/* Navigation Dots */}
-			<div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3">
+			<div className="absolute z-30 flex -translate-x-1/2 bottom-[-320px] left-1/2 space-x-3">
 				{slides.map((_, index) => (
 					<button
 						key={index}
