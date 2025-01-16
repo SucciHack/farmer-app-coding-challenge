@@ -5,13 +5,16 @@ import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
 import AddToCartButton from './AddToCartButton';
+import Link from 'next/link';
 
 export default function ProductCard() {
   return (
     <div className='bg-white shadow-lg rounded-md overflow-hidden'>
-      <Image className='h-[150px] object-cover' src="/farmer1.jpg" alt="" width={300} height={300}/>
+      <Link href='/ProductPage'>
+        <Image className='h-[150px] object-cover' src="/farmer1.jpg" alt="farmer" width={300} height={300}/>
+      </Link>
         <div className='flex justify-between items-center p-2'>
-        <p>Kaweesi Samuel</p>
+        <p>Farmer</p>
         <p className='text-green-400'>
         <FaCircleCheck/>
         </p>
