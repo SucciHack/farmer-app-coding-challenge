@@ -70,8 +70,6 @@ export default function Carousel() {
 						alt={slide.title}
 					/>
 				))}
-				{/* Overlay */}
-				<div></div>
 			</div>
 
 			{/* Text and Button Section */}
