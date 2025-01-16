@@ -20,7 +20,6 @@ export default function ProductCard({productsData}: {productsData:ProductsProps}
         <FaCircleCheck/>
         </p>
         </div>
-        <p className='px-2'>Organic Mango</p>
         <div className='p-2 flex justify-between'>
             <div className="flex gap-1 items-center text-sm text-yellow-300">
             <FaStar/>
