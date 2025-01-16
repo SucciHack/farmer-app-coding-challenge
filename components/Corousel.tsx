@@ -55,16 +55,16 @@ export default function Carousel() {
 	};
 
 	return (
-		<div className="relative h-[800px]">
+		<div className="relative h-[500px]">
 			{/* Image Section */}
-			<div className="relative h-80 w-[200px] mx-auto mt-[20%] object-contain overflow-hidden rounded-lg md:h-48">
+			<div className="relative h-[150px] w-[150px] mx-auto mt-[20%] object-contain overflow-hidden rounded-lg md:h-48">
 				{slides.map((slide, index) => (
 					<Image
 						key={index}
 						src={slide.image}
 						fill
 						priority
-						className={`absolute block w-full transition-opacity duration-700 ease-in-out ${
+						className={`absolute block transition-opacity duration-700 ease-in-out ${
 							index === currentIndex ? "opacity-100" : "opacity-0"
 						}`}
 						alt={slide.title}

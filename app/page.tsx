@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function onBoardingScreen() {
   return (
-      <div>
+      <div className='h-screen'>
         <Corousel/>
         <BottomNav/>
       </div>

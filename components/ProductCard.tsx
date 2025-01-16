@@ -9,7 +9,6 @@ import Link from 'next/link';
 import { ProductsProps } from '@/Types/types';
 
 export default function ProductCard({productsData}: {productsData:ProductsProps}) {
-  console.log(productsData)
   return (
     <div className='bg-white shadow-lg rounded-md overflow-hidden'>
       <Link href='/ProductPage'>
