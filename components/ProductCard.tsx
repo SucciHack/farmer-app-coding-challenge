@@ -6,15 +6,17 @@ import { FaStarHalfAlt } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
 import AddToCartButton from './AddToCartButton';
 import Link from 'next/link';
+import { ProductsProps } from '@/Types/types';
 
-export default function ProductCard() {
+export default function ProductCard({productsData}: {productsData:ProductsProps}) {
+  console.log(productsData)
   return (
     <div className='bg-white shadow-lg rounded-md overflow-hidden'>
       <Link href='/ProductPage'>
-        <Image className='h-[150px] object-cover' src="/farmer1.jpg" alt="farmer" width={300} height={300}/>
+        <Image className='h-[150px] object-cover' src={productsData.images[0]} alt={productsData.title} width={300} height={300}/>
       </Link>
         <div className='flex justify-between items-center p-2'>
-        <p>Farmer</p>
+        <p>{productsData.title}</p>
         <p className='text-green-400'>
         <FaCircleCheck/>
         </p>
@@ -27,13 +29,13 @@ export default function ProductCard() {
             <FaStar/>
             <FaStarHalfAlt/>
             <FaRegStar/>
-            <p>($500)</p>
+            <p>${productsData.price}</p>
             </div>
-            <p>$500</p>
+            <p>{productsData.quantity}</p>
         </div>
         <div className="flex justify-between px-2">
             <p className='text-green-600'>In stock</p>
-            <p className='font-bold text-lg'>$500</p>
+            <p className='font-bold text-lg'>{productsData.price}</p>
         </div>
         <AddToCartButton title='Add Cart'/>
     </div>
