@@ -5,7 +5,6 @@ import CardCategory from './CardCategory'
 
 export default async function Category() {
     const categoryData = await fetchCategory()
-  console.log(categoryData)
   return (
     <>
     <div className="flex justify-between font-bold px-2 text-lg">
