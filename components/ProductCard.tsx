@@ -40,7 +40,7 @@ export default function ProductCard({productsData}: {productsData:ProductsProps}
             View Details
           </button>
         </Link>
-        <AddToCartButton/>
+        <AddToCartButton title='Add Cart'/>
     </div>
 
   )
