@@ -9,7 +9,7 @@ export default function ProductsNavbar() {
   return (
     <div className='text-black'>
           <div className='flex justify-between p-2'>
-            <Link className='bg-white shadow-lg w-[50px] flex justify-center items-center rounded-full text-lg' href=''><LuCircleChevronLeft /></Link>
+            <Link className='bg-white shadow-lg w-[50px] flex justify-center items-center rounded-full text-lg' href='/Home'><LuCircleChevronLeft /></Link>
             <div className='flex gap-4 text-sm font-bold'>
               <AddToCartButton title='Sell Now'/>
               <div className='bg-white shadow-lg w-[50px] flex justify-center items-center rounded-full text-lg'><FaRegHeart /></div>
