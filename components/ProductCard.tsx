@@ -21,7 +21,7 @@ export default function ProductCard({productsData}: {productsData:ProductsProps}
         </p>
         </div>
         <div className='p-2 flex justify-between'>
-            <div className="flex gap-1 items-center text-sm text-yellow-300 bg-red-300">
+            <div className="flex gap-1 items-center text-sm text-yellow-600">
             <FaStar/>
             <FaStar/>
             <FaStar/>
