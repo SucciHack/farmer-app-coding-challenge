@@ -34,7 +34,7 @@ export default function MarketScreenCard({marketProductsData}:{marketProductsDat
                 <p className='text-green-600'>In stock</p>
                 <p className='font-bold text-lg'>{marketProductsData.quantity}</p>
             </div>
-            <AddToCartButton title='Add Cart'/>
+            <AddToCartButton/>
         </div>
     </div>
   )

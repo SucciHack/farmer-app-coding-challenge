@@ -7,7 +7,7 @@ import { MdDeliveryDining } from "react-icons/md";
 
 export default function BottomNav() {
   return (
-    <div className='bg-white shadow-xl py-4 flex justify-between fixed bottom-0 left-0 right-0 text-lg px-4 text-gray-300'>
+    <div className='bg-white shadow-xl py-4 flex justify-between fixed bottom-0 left-0 right-0 text-lg px-4 text-gray-500'>
       <p className='hover:bg-green-500 hover:text-white hover:h-[50px] hover:w-[50px] hover:rounded-full flex flex-col items-center justify-center text-lg'>
       <FaHome/>
       <a href="/Home" className='text-sm'>Home</a>

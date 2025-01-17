@@ -16,7 +16,7 @@ export type ProductsProps = {
         rating: string[],
         price: number,
         quantity: number,
-        images: string[],
+        images: string[] ,
         createdAt: string,
         updatedAt: string,
         categoryId: string

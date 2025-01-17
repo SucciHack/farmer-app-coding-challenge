@@ -21,7 +21,7 @@ export default function ProductCard({productsData}: {productsData:ProductsProps}
         </p>
         </div>
         <div className='p-2 flex justify-between'>
-            <div className="flex gap-1 items-center text-sm text-yellow-300">
+            <div className="flex gap-1 items-center text-sm text-yellow-300 bg-red-300">
             <FaStar/>
             <FaStar/>
             <FaStar/>
@@ -35,7 +35,12 @@ export default function ProductCard({productsData}: {productsData:ProductsProps}
             <p className='text-green-600'>In stock</p>
             <p className='font-bold text-lg'>{productsData.price}</p>
         </div>
-        <AddToCartButton title='Add Cart'/>
+        <Link href={`/Product/${productsData.id}`} className='flex justify-center items-center p-2'>
+          <button className='py-2 text-blue-700 text-deco rounded-md text-sm underline'>
+            View Details
+          </button>
+        </Link>
+        <AddToCartButton/>
     </div>
 
   )
