@@ -55,9 +55,9 @@ export default function Carousel() {
 	};
 
 	return (
-		<div className="relative">
+		<div className="relative py-24">
 			{/* Image Section */}
-			<div className="relative h-[150px] w-[150px] mx-auto mt-[20%] object-contain overflow-hidden rounded-lg md:h-48">
+			<div className="relative h-[150px] w-[150px] mx-auto object-contain overflow-hidden rounded-lg md:h-48">
 				{slides.map((slide, index) => (
 					<Image
 						key={index}
