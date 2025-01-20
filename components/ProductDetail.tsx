@@ -17,7 +17,7 @@ export default async function ProductDetail({product}:{product:ProductsProps}) {
       </div>
       <div className='flex justify-between items-center p-2'>
         <p className='text-2xl font-bold'>{product.title}</p>
-        <AddToCartButton title='Add Cart'/>
+        <AddToCartButton title='Add Cart' product={product}/>
       </div>
       <div className='p-2 flex justify-between'>
                   <div className="flex gap-1 items-center text-lg text-yellow-600">
