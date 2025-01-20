@@ -25,7 +25,7 @@ export default function CartItem() {
                         <button onClick={()=> updateQty("increment",item.id)} className='border-[1px] border-gray-400 py-1 px-3'>+</button>
                     </div>
                 </div>
-                <p className='font-bold flex flex-col'>Price:${item.price} <button onClick={()=> handleRemove(item.id)} className='font-normal border-[1px] border-red-500 py-1 px-6 flex justify-between items-center gap-3 text-red-500'>Remove Item <span className='text-red-500 text-2xl'><RiDeleteBin5Line /></span></button></p>
+                <p className='font-bold flex flex-col'>Price:${item.price} <button onClick={()=> handleRemove(item.id)} className='font-normal border-[1px] border-red-500 py-1 px-6 flex justify-between items-center gap-3 text-red-500'><span className='text-red-500 text-2xl'><RiDeleteBin5Line /></span>Remove Item</button></p>
             </div>
         </div>
           )
