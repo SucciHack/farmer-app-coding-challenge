@@ -20,6 +20,7 @@ type CartState = {
     items:ICartItem[]
     handleAddToCart:(product: ProductsProps)=> void
     handleRemove:(id:string) => void
+    updateQty:(type:"increment"|"decrement",id:string)=> void
 }
 
 export const useCartStore = create<CartState>()(
@@ -40,7 +41,7 @@ export const useCartStore = create<CartState>()(
                             description: product.description,
                             rating:product.rating,
                             price: product.price,
-                            quantity:product.quantity,
+                            quantity:1,
                             image: product.images[1]
                         }]
                     })
@@ -52,7 +53,22 @@ export const useCartStore = create<CartState>()(
                 const filteredItems = items.filter((item)=> id !== item.id);
                 set({items:filteredItems})
                 toast.success("Item Removed successfully")
-            }
+            },
+            updateQty:(type, id)=>{
+                const item = get().items.find((item)=> item.id === id)
+
+                if(!item){
+                    return
+                }
+                    if(type === "increment"){
+                      item.quantity += 1;
+                    }else if (item.quantity >1){
+                        item.quantity -=1
+                    }
+                    set({
+                        items:[...get().items],
+                    })
+                }
         }),
         {
             name: 'local-Storage'

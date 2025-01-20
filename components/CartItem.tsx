@@ -5,7 +5,7 @@ import React from 'react'
 import { RiDeleteBin5Line } from 'react-icons/ri'
 
 export default function CartItem() {
-  const {items,handleRemove} = useCartStore((state)=> state)
+  const {items,handleRemove,updateQty} = useCartStore((state)=> state)
   return (
     <div className='px-2'>
       {
@@ -20,9 +20,9 @@ export default function CartItem() {
                 <div>
                     <p className='text-sm mt-2'>Quantity:{item.quantity}</p>
                     <div className="flex items-center bg-white">
-                        <p className='border-[1px] border-gray-400 py-1 px-3'>-</p>
-                        <p className='border-[1px] border-gray-400 py-1 px-3'>1</p>
-                        <p className='border-[1px] border-gray-400 py-1 px-3'>+</p>
+                        <button onClick={()=> updateQty("decrement",item.id)} className='border-[1px] border-gray-400 py-1 px-3'>-</button>
+                        <p className='border-[1px] border-gray-400 py-1 px-3'>{item.quantity}</p>
+                        <button onClick={()=> updateQty("increment",item.id)} className='border-[1px] border-gray-400 py-1 px-3'>+</button>
                     </div>
                 </div>
                 <p className='font-bold flex flex-col'>Price:${item.price} <button onClick={()=> handleRemove(item.id)} className='font-normal border-[1px] border-red-500 py-1 px-6 flex justify-between items-center gap-3 text-red-500'>Remove Item <span className='text-red-500 text-2xl'><RiDeleteBin5Line /></span></button></p>
